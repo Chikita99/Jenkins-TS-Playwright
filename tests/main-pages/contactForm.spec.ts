@@ -1,12 +1,15 @@
-import path from 'path';
-import { test } from '../../fixtures/baseFixture'
-import { expect } from '@playwright/test';
-import fs from 'fs';
 
+import { test } from '../../fixtures/baseFixture';
+import { expect } from '@playwright/test';
+import { FileManagement } from '../../helpers/FileManagement';
 
 test.beforeEach(async ({ page, basePage }) => {
+    const fileManager = new FileManagement(page);
+
     await page.goto('/');
     await basePage.cookieScreenCTA();
+    fileManager.clearDownloadFolder()
+    
 })
 
 test('Check Contact Us Form', async ({ basePage, contactPage, page }) => {
@@ -29,9 +32,5 @@ test('Check Contact Us Form', async ({ basePage, contactPage, page }) => {
 })
 
 test.afterEach(async () => {
-    const downloadDir = path.join(__dirname, 'download');
-    const testFilePath = path.join(downloadDir, 'invoice.txt');
-    if (fs.existsSync(testFilePath)) {
-        fs.unlinkSync(testFilePath);  // Удаляем файл
-    }
+    
 });

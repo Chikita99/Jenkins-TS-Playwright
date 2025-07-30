@@ -2,7 +2,7 @@
 import { Page } from '@playwright/test';
 
 
-export class apiClient {
+export class ApiClient {
 
     constructor (public page: Page) {}
 
