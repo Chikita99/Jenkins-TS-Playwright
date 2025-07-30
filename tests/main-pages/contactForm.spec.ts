@@ -1,5 +1,7 @@
+import path from 'path';
 import { test } from '../../fixtures/baseFixture'
 import { expect } from '@playwright/test';
+import fs from 'fs';
 
 
 test.beforeEach(async ({ page, basePage }) => {
@@ -25,3 +27,11 @@ test('Check Contact Us Form', async ({ basePage, contactPage, page }) => {
     await page.locator(contactPage.submitBtn).click();
     await expect(page.locator(contactPage.successMessage)).toHaveText("Success! Your details have been submitted successfully.")
 })
+
+test.afterEach(async () => {
+    const downloadDir = path.join(__dirname, 'download');
+    const testFilePath = path.join(downloadDir, 'invoice.txt');
+    if (fs.existsSync(testFilePath)) {
+        fs.unlinkSync(testFilePath);  // Удаляем файл
+    }
+});
