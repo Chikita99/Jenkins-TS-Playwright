@@ -1,7 +1,7 @@
 
 import { test } from '../../fixtures/baseFixture';
 import { expect } from '@playwright/test';
-import { FileManagement } from '../../helpers/FileManagement';
+import { FileManagement } from '../../helpers/fileManagement';
 
 test.beforeEach(async ({ page, basePage }) => {
     const fileManager = new FileManagement(page);
