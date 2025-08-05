@@ -14,7 +14,6 @@ interface GConfig {
 
 const pwConfig = defineConfig({
     use: {
-        channel: 'chrome',
         //viewport: {height: 1080, width: 1920},
         headless: true,
         baseURL: "https://automationexercise.com",
