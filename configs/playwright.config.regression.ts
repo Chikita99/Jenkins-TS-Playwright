@@ -2,8 +2,9 @@ import {defineConfig} from '@playwright/test'
 import {config, timeout} from './global-config'
 
 export default defineConfig({
-    testDir: '../specs',
+    testDir: '../tests',
     fullyParallel: true,
+    retries: process.env.CI ? 2 : 0,
     testMatch: ['tests/**/*.spec.ts'],
     timeout: 480 * 1000,
     expect: {
