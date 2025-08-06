@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "test": "npx playwright test",
-    "test:testname": "npx playwright test --project=chromium tests/*/{testname}.spec.ts"
+    "test:debug": "npx playwright test -c configs/playwright.config.debug.ts",
+    "test:stab": "npx playwright test -c configs/playwright.config.debugMetrics.ts",
+    "test:regression": "npx playwright test -c configs/playwright.config.regression.ts",
+    "format": "prettier --write \"*.{js,md}\" \"src/controllers/dataBaseController.ts\"",
+    "lint": "tsc --noEmit && eslint . --ext .js,.ts"
   },
   "keywords": [],
   "author": "",
