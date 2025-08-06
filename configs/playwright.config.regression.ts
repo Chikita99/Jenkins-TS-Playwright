@@ -2,8 +2,6 @@ import {defineConfig} from '@playwright/test'
 import {config, timeout} from './global-config'
 
 export default defineConfig({
-    globalSetup: require.resolve('../global-setup'),
-    globalTeardown: require.resolve('../global-teardown'),
     testDir: '../specs',
     fullyParallel: true,
     testMatch: ['tests/**/*.spec.ts'],
