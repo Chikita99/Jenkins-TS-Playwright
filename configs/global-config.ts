@@ -33,11 +33,7 @@ const pwConfig = defineConfig({
     reporter: [
         ['allure-playwright', { outputFolder: 'allure-results' }],
         ['line'],
-        ['html', {
-            outputFolder: 'playwright-report',
-            open: 'never'
-        }],
-        ['dot'],
+        ['dot']
     ]
 })
 
