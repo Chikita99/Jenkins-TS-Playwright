@@ -8,7 +8,7 @@ test.beforeEach(async ({ page, basePage }) => {
     await basePage.cookieScreenCTA();
 })
 
-test('Search check on Product Page', async ({ page, basePage, productPage }) => {
+test('Search check on Product Page @T0006', async ({ page, basePage, productPage }) => {
     await page.locator(basePage.productsBtn).click();
     await expect(page).toHaveURL("https://automationexercise.com/products");
     await expect(page.locator(productPage.mainTitle)).toHaveText("All Products");

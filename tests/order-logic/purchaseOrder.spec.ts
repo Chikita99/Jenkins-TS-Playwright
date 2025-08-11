@@ -9,7 +9,7 @@ test.beforeEach(async ({ page, basePage }) => {
     await basePage.cookieScreenCTA();
 })
 
-test('Download Invoice after purchase order', async ({ basePage, loginPage, page }) => {
+test('Download Invoice after purchase order @T0007', async ({ basePage, loginPage, page }) => {
     const downloadFolder = path.resolve('download');
     const downloadedFileName = 'invoice.txt';
     const expectedText = "Hi Test Test, Your total purchase amount is 500. Thank you";

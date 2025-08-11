@@ -7,7 +7,7 @@ test.beforeEach(async ({ page, basePage }) => {
     await basePage.cookieScreenCTA();
 })
 
-test('Register and delete new user', async ({ basePage, loginPage, page }) => {
+test('Register and delete new user @T0001', async ({ basePage, loginPage, page }) => {
     await expect(page).toHaveURL('https://automationexercise.com/');
     await page.locator(basePage.menuLoginBtn).click();
     await expect(page.locator(loginPage.newUserTitle)).toHaveText("New User Signup!")
@@ -41,7 +41,7 @@ test('Register and delete new user', async ({ basePage, loginPage, page }) => {
     await page.locator(basePage.continueBtn).click();
 })
 
-test('Logic User with incorrect password and email', async ({basePage, loginPage, page}) => {
+test('Login User with incorrect password and email @T0002', async ({basePage, loginPage, page}) => {
     await expect(page).toHaveURL('https://automationexercise.com/');
     await page.locator(basePage.menuLoginBtn).click();
     await page.locator(loginPage.emailSignInForm).fill("test@gmail.com");

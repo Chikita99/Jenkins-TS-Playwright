@@ -6,7 +6,7 @@ test.beforeEach(async ({ page, basePage }) => {
     await basePage.cookieScreenCTA();
 })
 
-test("Check Carousel banner", async ({page, basePage}) => {
+test("Check Carousel banner @T0005", async ({page, basePage}) => {
     const text = {
         h1Title: "AutomationExercise",
         h2Title: "Full-Fledged practice website for Automation Engineers",

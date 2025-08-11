@@ -12,7 +12,7 @@ test.beforeEach(async ({ page, basePage }) => {
 
 });
 
-test("Check Contact Us Form", async ({ basePage, contactPage, page }) => {
+test("Check Contact Us Form @T0004", async ({ basePage, contactPage, page }) => {
     await page.locator(basePage.contactUsBtn).click();
     await expect(page).toHaveURL("https://automationexercise.com/contact_us");
     await expect(page.locator(contactPage.mainTitle)).toHaveText("Contact Us");
