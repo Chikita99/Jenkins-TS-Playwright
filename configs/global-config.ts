@@ -16,7 +16,7 @@ const pwConfig = defineConfig({
     use: {
         //viewport: {height: 1080, width: 1920},
         headless: true,
-        baseURL: "https://automationexercise.com",
+        baseURL: process.env.BASE_URL || "https://automationexercise.com",
         browserName: 'chromium',
         launchOptions: {
             args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream']
