@@ -4,8 +4,8 @@ Basic info for Google cloud server and Jenkins testing pipeline setup.
 2) Launched Jenkins with next setup:
 - Separate node for running tests
 - Pipeline setup with:
-    Playwright automation tests, from Github repository
-    Allure report added to each run
+    Playwright automation tests, from Github repository, 
+    Allure report added to each run, 
     Ability to add parameters to pipeline run
 
 <img width="956" height="442" alt="image" src="https://github.com/user-attachments/assets/9d005ec1-427a-45eb-8d7d-7d76e217a8da" />
