@@ -1,7 +1,7 @@
 Basic info for Google cloud server and Jenkins testing pipeline setup.
 1) Setup VM instance in Google Cloud and all necessary settings for Jenkins and Agent
    <img width="679" height="425" alt="image" src="https://github.com/user-attachments/assets/c1d5a5fb-da8e-43b4-80e4-a435b4d1a6c0" />
-2) Launched Jenkins with next setupЖ
+2) Launched Jenkins with next setup:
 - Separate node for running tests
 - Pipeline setup with:
     Playwright automation tests, from Github repository
